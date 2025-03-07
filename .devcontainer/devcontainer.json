@@ -53,7 +53,11 @@
             "**/.parquet": true,
             "**/.pkl": true,
             "**/.xls": true
-        },  
+        },
+        "jupyter.kernels.excludePythonEnvironments": [
+          "/bin/python3",
+          "/usr/bin/python3"
+        ],
         "jupyter.themeMatplotlibPlots": true,
         "jupyter.widgetScriptSources": [
             "unpkg.com",
