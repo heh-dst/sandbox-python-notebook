@@ -1,0 +1,77 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/anaconda
+{
+	"name": "Python 3 notebook",
+	"image": "mcr.microsoft.com/devcontainers/anaconda:1-3",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	//"forwardPorts": [8888],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "python --version",
+
+	// Use 'postStartCommand' to run commands after the container is started.
+	//"postStartCommand": "nohup bash -c 'jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root &'",
+
+	// Configure tool-specific properties.
+	"customizations": {
+    "vscode": {
+      "extensions": [
+        "aaron-bond.better-comments",
+        "adpyke.codesnap",
+        "charliermarsh.ruff",
+        "editorconfig.editorconfig",
+        "esbenp.prettier-vscode",
+        "GitHub.github-vscode-theme",
+        "ms-python.python",
+				"ms-python.vscode-pylance",
+        "ms-toolsai.datawrangler",
+				"ms-toolsai.jupyter",
+        "ms-vsliveshare.vsliveshare",
+        "visualstudioexptteam.vscodeintellicode",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "vscode-icons-team.vscode-icons"
+      ],
+      "settings": {
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[python]": {
+          "editor.defaultFormatter": "charliermarsh.ruff",
+          "editor.formatOnType": true,
+          "editor.formatOnSave": true
+        },
+        "breadcrumbs.enabled": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.inlineSuggest.enabled": true,
+        "editor.lineHeight": 17,
+        "files.autoSave": "afterDelay",
+        "files.exclude": {
+            "**/.csv": true,
+            "**/.parquet": true,
+            "**/.pkl": true,
+            "**/.xls": true
+        },  
+        "jupyter.themeMatplotlibPlots": true,
+        "jupyter.widgetScriptSources": [
+            "unpkg.com",
+            "jsdelivr.com"
+        ],
+        "notebook.output.scrolling": true,
+        "python.analysis.autoImportCompletions": true,
+        "python.analysis.fixAll": ["source.unusedImports"],
+        "python.testing.autoTestDiscoverOnSaveEnabled": true,
+        "python.testing.pytestEnabled": false,
+        "python.testing.promptToConfigure": false,
+        "python.testing.unittestArgs": ["-v", "-s", ".", "-p", "test*.py"],
+        "python.testing.unittestEnabled": true
+      }
+    }
+  }
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
